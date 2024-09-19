@@ -36,5 +36,6 @@ func main() {
 	// gender, name := "male", "Jane Doe" // this will work because I'm declaring a new variable: gender
 
 	const pi = 3.14159
+	fmt.Printf("The value of pi is %v and the type is %T\n", pi, pi) // expected output: The value of pi is 3.14159 and the type is float64
 	// pi = 2.71828 // this line throws an error, cannot assign to pi because it is a constant
 }
