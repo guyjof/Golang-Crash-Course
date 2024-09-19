@@ -18,4 +18,8 @@ func main() {
 	*d += 1
 
 	fmt.Println(c) // 2
+
+	var e int = 1
+	var f *int = &e
+	fmt.Printf("The value of e is %v and the value of f is %v\n", e, f) // expected output: The value of e is 1 and the value of f is 0xc0000120b8
 }
