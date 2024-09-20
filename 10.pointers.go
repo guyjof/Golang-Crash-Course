@@ -19,7 +19,19 @@ func main() {
 
 	fmt.Println(c) // 2
 
-	var e int = 1
-	var f *int = &e
-	fmt.Printf("The value of e is %v and the value of f is %v\n", e, f) // expected output: The value of e is 1 and the value of f is 0xc0000120b8
+	// deep dive into pointers
+
+	// var p *int32                                      // initial value of p is <nil>
+	var p *int32 = new(int32) // initial value of p is 0
+	var i int32
+	fmt.Printf("The value p is the address of: %v\n", p) // expected output: 0x1400000e0f8
+	fmt.Printf("The value p points to is: %v\n", *p)     // expected output: 0
+	// now if we want to change the value p points to
+	*p = 42
+	fmt.Printf("The value p points to now is: %v\n", *p) // expected output: 42
+	// we can also set the address of p to the memory address of i
+	// by using the & operator to get the address of i
+	p = &i
+	fmt.Printf("The value p is the address of: %v\n", p) // expected output: 0x1400010402c
+	fmt.Printf("The value p points to is: %v\n", *p)     // expected output: 0
 }
