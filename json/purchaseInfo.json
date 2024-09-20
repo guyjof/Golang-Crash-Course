@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Toy car",
+    "price": 10,
+    "amount": 3
+  },
+  {
+    "name": "Tamagotchi",
+    "price": 20,
+    "amount": 1
+  }
+]
