@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	age := 25
@@ -22,4 +25,12 @@ func main() {
 	default:
 		fmt.Println("You have an animal")
 	}
+
+	// short if statement
+	if x := math.Pow(2, 3); x > 5 {
+		fmt.Println("x is greater than 5")
+	} else {
+		fmt.Println("x is less than or equal to 5")
+	}
+	// fmt.Println(x) // x is not available here because it is declared in the if statement
 }
